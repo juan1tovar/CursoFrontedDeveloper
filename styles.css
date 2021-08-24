@@ -3,8 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* html {
-} */
+html {
+  overflow-y: auto;
+  /* width: 100%; */
+}
 :root {
   font-family: "Muli", sans-serif;
   font-size: 6.25%;
@@ -13,7 +15,7 @@
 }
 body {
   background-color: var(--background-color);
-  height: 100vh;
+  min-height: 100vh;
 }
 a {
   color: var(--text-color);
@@ -22,9 +24,12 @@ a {
 a:hover {
   text-decoration: underline;
 }
+::placeholder {
+  color: var(--text-color);
+}
 .header {
   /* background-color: var(--background-color); */
-  width: 100vw;
+  width: 100%;
   padding-top: 15rem;
   display: flex;
   justify-content: space-between;
@@ -76,24 +81,24 @@ ul:hover {
 .search-input {
   border: 2px solid var(--text-color);
   border-radius: 25rem;
-  background-color: rgba(255, 255, 255, .1);
+  background-color: rgba(255, 255, 255, 0.1);
   font-size: 17rem;
   padding: 13.1rem;
   width: 90%;
   max-width: 500px;
 }
-.search-input:focus-visible{
+.search-input:focus-visible {
   outline: none;
 }
-::placeholder{
-color: var(--text-color);
-}
 .carousel {
-    background-color: var(--background-color);
-  width: 100vw;
-  overflow: scroll;
+  background-color: var(--background-color);
+  width: 100%;
+  overflow: hidden;
   padding: 30rem;
   position: relative;
+}
+.carousel:hover {
+  overflow: overlay;
 }
 .carousel__container {
   white-space: nowrap;
@@ -101,53 +106,57 @@ color: var(--text-color);
   padding-bottom: 10rem;
 }
 .carousel-item {
-    background-color: var(--text-color);
-    width: 200rem;
-    height: 250rem;
-    border-radius: 20rem;
-    overflow: hidden;
-    margin-right: 10rem;
-    display: inline-block;
-    cursor: pointer;
-    transition: 450ms;
-    transform-origin: center left;
-    position: relative;
+  background-color: var(--text-color);
+  width: 200rem;
+  height: 250rem;
+  border-radius: 20rem;
+  overflow: hidden;
+  margin-right: 10rem;
+  display: inline-block;
+  cursor: pointer;
+  transition: 450ms;
+  transform-origin: center left;
+  position: relative;
 }
 .carousel-item:hover ~ .carousel-item {
-    transform: translate(100rem);
+  transform: translate(100rem);
 }
 .carousel__container:hover .carousel-item {
-    opacity: 0.3;
+  opacity: 0.3;
 }
 .carousel__container:hover .carousel-item:hover {
-    opacity: 1;
-    transform: scale(1.5);
+  opacity: 1;
+  transform: scale(1.5);
 }
 .carousel-item__img {
-    /* display: none; */
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  /* display: none; */
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .carousel-item__detail {
-    background: linear-gradient(to top, rgba (0,0,0,0.9) 0%, rgba(0,0,0,0)100%);
-    opacity: 0;
-    transition: 450ms opacity;
-    padding: 10rem;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    align-items: center;
+  background: linear-gradient(
+    to top,
+    rgba (0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 0;
+  transition: 450ms opacity;
+  padding: 10rem;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
 }
 .carousel-item:hover .carousel-item__detail {
-    opacity: 1;
+  opacity: 1;
 }
 .carousel-item__detail img {
-    margin-right: 4rem;
-    height: 18rem;
-    display: inline-block;
+  margin-right: 4rem;
+  height: 18rem;
+  display: inline-block;
 }
 .carousel-item__detail p {
-    font-size: 10rem;
-    display: inline-block;
+  font-size: 10rem;
+  display: inline-block;
 }
