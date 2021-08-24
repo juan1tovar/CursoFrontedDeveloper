@@ -15,6 +15,13 @@ body {
   background-color: var(--background-color);
   height: 100vh;
 }
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 .header {
   /* background-color: var(--background-color); */
   width: 100vw;
@@ -34,17 +41,13 @@ body {
 .header-menu ul {
   display: none;
   list-style: none;
-  position: absolute;s
+  position: absolute;
   width: 100rem;
   text-align: right;
   margin-left: -14rem;
 }
 .header-menu li {
   margin: 10rem 0;
-}
-.header-menu li a {
-  color: var(--text-color);
-  text-decoration: none;
 }
 .header-menu:hover ul,
 ul:hover {
