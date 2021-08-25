@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="login-tablet.css"
+      media="screen and (min-width: 600px)"
+    />
+    <link
+      rel="stylesheet"
+      href="login-desktop.css"
+      media="screen and (min-width: 700px)"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Muli&display=swap"
+    />
+    <title>Iniciar sesión | PlatziVideo</title>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="header__img"
+        src="../assets/logo-platzi-video-BW2.png"
+        alt="Logo de PlatziVideo"
+      />
+    </header>
+    <main class="main">
+      <section class="login-container">
+        <h1 class="login-container__title">Inicia sesión</h1>
+        <form class="login-container__form">
+          <input
+            class="login-container__form--input"
+            placeholder="Correo"
+            autocomplete="email"
+            type="text"
+          />
+          <input
+            class="login-container__form--input"
+            placeholder="Contraseña"
+            autocomplete="password"
+            type="text"
+          />
+          <button class="login-container__form--subbmit">Iniciar sesión</button>
+        </form>
+        <div class="login-container__rememberme">
+          <label>
+            <input class="login-container__rememberme--box" type="checkbox" />
+            Recuérdame
+          </label>
+          <a href="#">Olvidé mi contraseña</a>
+        </div>
+        <nav class="login-container__AlternativeLogin">
+          <a class="alternativeLogin__LoginLink" href="#"
+            ><img
+              src="https://img.icons8.com/windows/32/ffffff/google-logo.png"
+              alt="Logo de Google"
+            />
+            Inicia sesión con Google</a
+          >
+          <a class="alternativeLogin__LoginLink" href="#"
+            ><img
+              src="https://img.icons8.com/ios-glyphs/30/ffffff/twitter--v1.png"
+              alt="Logo de twitter"
+            />
+            Inicia sesión con Google</a
+          >
+        </nav>
+        <div class="login-container__register">
+          <label class="login-container__register--label" for="register-link"
+            >¿Aún no tienes ninguna cuenta? </label
+          ><a
+            class="login-container__register--link"
+            id="register-link"
+            href="#"
+            >Regístrate</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <nav class="footer__nav">
+        <a href="#" class="footer__nav--link">Términos de Uso</a>
+        <a href="#" class="footer__nav--link">Declaración de Privacidad</a>
+        <a href="#" class="footer__nav--link">Centro de ayuda</a>
+      </nav>
+    </footer>
+  </body>
+</html>

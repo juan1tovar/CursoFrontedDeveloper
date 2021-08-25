@@ -1,0 +1,11 @@
+.login-container {
+  max-width: 360rem;
+  background: #ffffff29;
+  border: solid 2rem;
+  border-radius: 40rem;
+  padding: 50rem;
+}
+.footer__nav--link {
+  display: inline;
+  margin: 5rem;
+}
